@@ -1,0 +1,41 @@
+{
+  "name": "graceful-shutdown",
+  "version": "1.0.0",
+  "description": "Gracefully shutdown open connection in Node before Application Exit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stackbits/graceful-shutdown.git"
+  },
+  "keywords": [
+    "node",
+    "graceful-shutdown",
+    "SIGINT",
+    "SIGTERM"
+  ],
+  "author": "stackbits",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Stackbits/graceful-shutdown/issues"
+  },
+  "homepage": "https://github.com/Stackbits/graceful-shutdown#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.9",
+    "pino": "^5.1.1",
+    "redis": "^2.8.0"
+  }
+}
