@@ -11,7 +11,7 @@ const server = app.listen(3000, () => {
     console.log({ message: 'Server started at http://localhost:3000' });
 });
 
-const signals = ['SIGINT', 'SIGTERM'];
+const signals = ['SIGINT', 'SIGTERM', 'SIGUSR2'];
 
 const shutdownCallback = async () => {
     await server.close();

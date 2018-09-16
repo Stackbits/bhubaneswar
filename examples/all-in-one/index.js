@@ -14,7 +14,7 @@ const server = app.listen(3000, () => {
     logger.info({ message: 'Server started at http://localhost:3000' });
 });
 
-const signals = ['SIGINT', 'SIGTERM'];
+const signals = ['SIGINT', 'SIGTERM', 'SIGUSR2'];
 
 const shutdownCallback = async () => {
     await redisClient.quit();
@@ -27,3 +27,5 @@ const shutdownCallback = async () => {
 };
 
 shutdown({ signals, shutdownCallback });
+
+export default server;

@@ -1,8 +1,5 @@
 import redis from 'redis';
-import bluebird from 'bluebird';
 import shutdown from '../../index';
-
-bluebird.promisifyAll(redis);
 
 // connecting to redis with config param
 const redisClient = redis.createClient({

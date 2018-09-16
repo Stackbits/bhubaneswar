@@ -1,9 +1,5 @@
 import mongoose from 'mongoose';
-import bluebird from 'bluebird';
 import shutdown from '../../index';
-
-// Promisifing Mongoose
-mongoose.Promise = bluebird.Promise;
 
 const initializeMongo = async () => {
     await mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true });

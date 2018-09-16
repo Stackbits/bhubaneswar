@@ -4,7 +4,7 @@
   "description": "Gracefully shutdown open connection in Node before Application Exit.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc --reporter=lcov --reporter=text-lcov mocha examples/**/*.spec.js --reporter spec --timeout 5000 --require babel-polyfill --require babel-register --exit"
   },
   "repository": {
     "type": "git",
@@ -25,14 +25,20 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.6",
+    "babel-plugin-istanbul": "^5.0.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
     "eslint": "^5.4.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4",
+    "nyc": "^13.0.1"
   },
   "dependencies": {
-    "bluebird": "^3.5.1",
     "express": "^4.16.3",
     "mongoose": "^5.2.9",
     "pino": "^5.1.1",
